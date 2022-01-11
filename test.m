@@ -137,3 +137,6 @@ break
 end
 end % end of the loop
 fprintf(' Sum = %g \n',s)
+
+%% Lab part 3 (a)
+
