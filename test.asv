@@ -19,13 +19,20 @@ B=[1,4,5;9,6,3;2,3,1];
 v1=[1,1,2];
 v2=[0.40824829 ; -0.81649658 ; 0.40824829];
 
-A * B %matric multiplication
-A .* B %each postion got multiplied together
+% A * B %matric multiplication
+% A .* B %each postion got multiplied together
+% 
+% A ./ B %each postion got divided by each other
+% 
+% A * v1 %Can't do it because of matrix multiplication
+% v1 * A %Matrix multiplication for the two matricies
+% A * v2 %Matrix multiplication for the two matricies
+% 
+% A(2,2).*B(2,2)
 
-A ./ B %each postion got divided by each other
+%exp(A+i*B) %Made B matrix complex then added A
 
-A*v1
-v1*A
+A(:,2) ./ v2
 %% Lab part 2 (a)
 
 d = 10000;

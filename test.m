@@ -28,7 +28,11 @@ A * v1 %Can't do it because of matrix multiplication
 v1 * A %Matrix multiplication for the two matricies
 A * v2 %Matrix multiplication for the two matricies
 
+A(2,2).*B(2,2)
 
+exp(A+i*B) %Made B matrix complex then added A
+
+A(:,2) ./ v2
 %% Lab part 2 (a)
 
 d = 10000;
