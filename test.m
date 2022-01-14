@@ -5,12 +5,12 @@ clear all
 % % x = sin(2)
 % a=sin(5);
 % b=cos(5)
-% % N = input('Enter a value for N - ');
-% % fprintf(' N =%g \n',500)
-% % fprintf(' x =%1.12g \n',pi)
-% % fprintf(' x =%1.10e \n',pi)
-% % fprintf(' x =%6.2f \n',pi)
-% % fprintf(' x =%12.8f y =%12.8f \n',5,exp(5))
+N = input('Enter a value for N - ');
+fprintf(' N =%g \n',500)
+fprintf(' x =%1.12g \n',pi)
+fprintf(' x =%1.10e \n',pi)
+fprintf(' x =%6.2f \n',pi)
+fprintf(' x =%12.8f y =%12.8f \n',5,exp(5))
 
 %a)
 % d = 10000;
@@ -118,7 +118,7 @@ s=s+term; % add 1/n^2 to s until the condition is met
 end % end of the loop
 fprintf(' Sum = %g \n',s)
 
-%% 
+%% 4.6
 
 clear; close all;
 term=1; % load the first term in the sum, 1/1^2=1
@@ -139,4 +139,32 @@ end % end of the loop
 fprintf(' Sum = %g \n',s)
 
 %% Lab part 3 (a)
+
+clear; % clear all variables from memory
+close all; % close any figure windows
+N=12;
+% steps the value of n from 1 to N
+for n=1:N 
+    r = mod(24,n); %devide 24 by number 1 through 12
+    if (r==0) %if no remainder it is a factor
+        fprintf('%g is a factor of 24 \n',n);
+    else
+        continue %move on with code
+    end
+end
+
+clear; % clear all variables from memory
+close all; % close any figure windows
+N=9324;
+% steps the value of n from 1 to N
+for n=1:N 
+    r = mod(18648,n); %devide 18648 by number 1 through 9324
+    if (r==0) %if no remainder it is a factor
+        fprintf('%g is a factor of 24 \n',n);
+    else
+        continue %move to next number
+    end
+end
+%% Lab part 3 (b)
+
 
