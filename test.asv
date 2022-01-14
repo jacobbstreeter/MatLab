@@ -1,6 +1,7 @@
 clear
 clc
 clear all
+%% Intro
 
 % % x = sin(2)
 % a=sin(5);
@@ -12,12 +13,27 @@ fprintf(' x =%1.10e \n',pi)
 fprintf(' x =%6.2f \n',pi)
 fprintf(' x =%12.8f y =%12.8f \n',5,exp(5))
 
-%a)
-% d = 10000;
-% v = 750;
-% g = 9.8;
-% 
-% x = (asin((d*g)/v^2))/2
+%% Lab part 1 (a-f)
+A=[1,2,3;4,5,6;7,8,9];
+B=[1,4,5;9,6,3;2,3,1];
+v1=[1,1,2];
+v2=[0.40824829 ; -0.81649658 ; 0.40824829];
+
+A * B %matric multiplication
+A .* B %each postion got multiplied together
+
+A ./ B %each postion got divided by each other
+
+A*v1
+v1*A
+%% Lab part 2 (a)
+
+d = 10000;
+v = 750;
+g = 9.8;
+
+x = (asin((d*g)/v^2))/2
+%% Lab part 2 (b)
 
 v1 = 30000;
 v2 = [-5000, 8000, 1000];
@@ -25,6 +41,7 @@ m1 = 6e24;
 m2 = 1e19;
 
 vf = ((m1.*v1) + (m2.*v2)./ (m1 + m2))
+%% 
 
 a=sin(5);
 b=cos(5)
@@ -153,5 +170,18 @@ for n=1:N
     end
 end
 
+clear; % clear all variables from memory
+close all; % close any figure windows
+N=9324;
+% steps the value of n from 1 to N
+for n=1:N 
+    r = mod(18648,n); %devide 18648 by number 1 through 9324
+    if (r==0) %if no remainder it is a factor
+        fprintf('%g is a factor of 24 \n',n);
+    else
+        continue %move to next number
+    end
+end
 %% Lab part 3 (b)
+
 
