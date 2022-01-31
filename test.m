@@ -190,5 +190,35 @@ for n=1:N
     end
 end
 %% Lab part 3 (b)
+clear;
+v = 750;
+g = 9.8; 
+t = 0;
+d = 0;
 
+while d < 5000
+    t = t + 0.1;
+    d = (v^2/g)*sind(2*t);
+end
 
+fprintf(' t = %g \n', t)
+
+%% Lab part 3 (c)
+
+debt = 100000;
+int = 0.005;
+months = 0;
+
+while debt > 0
+    months = months +1;
+    debt = (debt + (debt * int)) - 1000;
+    if debt < 0
+        b = debt;
+        debt = 0;
+    end
+end
+
+totalPayed = months * 1000 - b;
+
+fprintf (' Total Payed = %d \n', totalPayed)
+    

@@ -19,18 +19,18 @@ B=[1,4,5;9,6,3;2,3,1];
 v1=[1,1,2];
 v2=[0.40824829 ; -0.81649658 ; 0.40824829];
 
-% A * B %matric multiplication
-% A .* B %each postion got multiplied together
-% 
-% A ./ B %each postion got divided by each other
-% 
-% A * v1 %Can't do it because of matrix multiplication
-% v1 * A %Matrix multiplication for the two matricies
-% A * v2 %Matrix multiplication for the two matricies
-% 
-% A(2,2).*B(2,2)
+A * B %matric multiplication
+A .* B %each postion got multiplied together
 
-%exp(A+i*B) %Made B matrix complex then added A
+A ./ B %each postion got divided by each other
+
+A * v1 %Can't do it because of matrix multiplication
+v1 * A %Matrix multiplication for the two matricies
+A * v2 %Matrix multiplication for the two matricies
+
+A(2,2).*B(2,2)
+
+exp(A+i*B) %Made B matrix complex then added A
 
 A(:,2) ./ v2
 %% Lab part 2 (a)
@@ -190,5 +190,35 @@ for n=1:N
     end
 end
 %% Lab part 3 (b)
+clear;
+v = 750;
+g = 9.8; 
+t = 0;
+d = 0;
 
+while d < 5000
+    t = t + 0.1;
+    d = (v^2/g)*sind(2*t);
+end
 
+fprintf(' t = %g \n', t)
+
+%% Lab part 3 (c)
+
+debt = 100000;
+int = 0.005;
+months = 0;
+
+while debt > 0
+    months = months +1;
+    debt = (debt + (debt * int)) - 1000;
+    if debt < 0
+        b = debt;
+        debt = 0;
+    end
+end
+
+totalPayed = months * 1000 - b;
+
+fprintf (' Total Payed = %d \n', totalPayed)
+    
